@@ -20,7 +20,7 @@
 \newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
 \newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
 \newcommand{\li}{\item[~]}
-\newcommand{\bidsection}[1]{\newpage \section{\texorpdfstring{#1}{}}}
+\newcommand{\bidsection}[1]{\section{\texorpdfstring{#1}{}}}
 
 
 \title{\bf{2/1 Game Forcing}}
@@ -198,7 +198,7 @@
     }
 
     Passed hands respond identically, but cannot make forcing bids (ie \cl2 is passable).  Since responder cannot have a game force, xyz \di2 shows a maximum invite, generally an [11(+)-12] count that is nearly openable, while \cl2 (still transfer) shows [10-11].
-
+\newpage
 
 \bidsection{\di{1}}
 
@@ -250,8 +250,7 @@
         \li \cl2 - 2/1, 5+\cl{}s.  Does not deny major.
         \li \cl3 - [10-12] 6+\cl{}s, good suit quality.  Denies majors
     }
-
-    
+\newpage
 
 \bidsection{\he{1}}
 
@@ -372,7 +371,10 @@
         \li \di2 - 4+\di{}s, 2/1 GF
         \li \he2 - [8-10] 3+ \he{}s, constructive raise
         \ul {
-            \li \sp2 - arbitrary splinter, no help-suit.  Relay to 2NT
+            \li \sp2 - invitational ambiguous splinter.  Relay to 2NT or bid major with min/max.
+            \ul {
+                \li 2NT-\he3 - spade shortness (surrogate)
+            }
             \li 2NT - Help suit in spades
             \li \cl3 - [15-16] Help suit in clubs
             \li \di3 - [15-16] Help suit in diamonds
@@ -430,6 +432,7 @@
         \li \sp2 - [10-11] 5+\sp{}s, 4\he{}s.
         \li 2NT - [11-12] no fit, invite.
     }
+\newpage
 
 \bidsection{\sp{1}}
 
@@ -481,10 +484,20 @@
             \li \he3 - [14+] 3+\he{}s (slow shows).  Flags hearts
             \li \he4 - [11-13] 3+\he{}s (fast arrival, typically balanced)
         }
+        \li \sp2 - [8-10] constructive raise
+        \ul {
+            \li 2NT - invitational ambiguous splinter.  Relay to \cl3 or bid major with min/max.
+            \ul {
+                \li \cl3- club shortness (surrogate)
+            }
+        }
+        \li \he3 - [14-16] 4+\sp{}s, splinter
+        \li \he4 - 7+\he{}s, preemptive jump
     }
 
     For 2/1 auctions, jumps above reverses are splinters such as: \he1-\cl2-\sp3.  In case of a splinter in minor, you sacrifice Kickback, which is accessible by setting trumps via a natural raise (\sp1-\di2-\he4 is a splinter, since \di3 confirms a fit for Kickback)
-    
+\newpage
+
 \bidsection{1NT [14(+)-17]}
 
     Any 15-17 with (4333), (4432), or (5332) distribution are opened 1NT.  The semi-balanced hands (5422), (6322) may be opened 1NT only if the longest suit is a minor. 14 HCP hands with a strong 5+ suit may be upgraded to 1NT.  When responder range-asks, a minimum is [14(+)-15], and maximum are [16-17].  A 15-count with good controls and shape may be upgraded \textit{only} when responder is slammish.
@@ -715,8 +728,9 @@
         }
         \li \di3 - 6+\di{}s, KQ or better.  5-card suit acceptable with 3-3 in majors.  Use \cl3 structure.
     }
+\newpage
 
-\bidsection{2\di{}/\he{}\sp{}}
+\bidsection{2\di{}/\he{}/\sp{}}
 
     The first of the weak-2 opening bids, \di2 is perhaps the most interesting.  It eats up bidding space without giving the opposition a major to look for.  \he2/\sp2 have the benefit of more often reaching \he4/\sp4, which makes it easier to reach game for the partnership.  Regardless of suit, it is important for the opener to have a well-defined hand for when their partner is preempted.  Since preempts depending on both vulnerability and seat, the definitions are as follows:
 
@@ -770,8 +784,9 @@
         \li \he4 - [0+] with support (preemptive or strong)
     }
 
-    Note that point ranges are rough guidance. \hhand{KT9, x, QJT9xxx, xxx} is worth much more than [6] opposite a \sp2 response, while \hhand{xx, QJ, KJxxxx, QJx} is worth less than the [9] advertised.  New suits after OGUST are 5+, natural and forcing.
-    
+    Note that point ranges are rough guidance. \hhand{KT9, x, QJT9xxx, xxx} is worth much more than [6] opposite a \sp2 response, while \hhand{xx, QJ, KJxxxx, QJx} is worth less than the [9] advertised.  New suits after OGUST are cuebids for the preempted suit, game-forcing and possible slam interest.
+\newpage
+
 \bidsection{2NT [20-21]}
 
     2NT may be opened with shapes (4333), (4432), (5332), (5422), (6332), and (5431).  Singletons must be either A or K, opener must not have a 6-card major or 5-4 in the majors.\n
@@ -821,13 +836,13 @@
     }
 \bidsection{3\cl{}/\di{}/\he{}/\sp{}}
 
-    Unlike 2-level preempts, 3-level preempts are mostly non-constructive.  They almost always show a minimum 7-card suis; the exceptions occur 3rd seat at favorable vulnerability or \cl3 (since \cl2 is not preemptive). \n
+    Unlike 2-level preempts, 3-level preempts are mostly non-constructive.  They almost always show a 7-card suit; the exceptions occur 3rd seat at favorable vulnerability or \cl3 (since \cl2 is not preemptive).  Since 4m is artificial, 3-level minor preempts may have an 8-card suit, though 8-card suits may also be opened at the 5-level. \n
 
 \section{3NT - Gambling}
 
-    3NT shows a 7-card (or better) minor headed by AKQ (or better).  In 1st/2nd seat, opener may have no more than an outside doubleton Q.  In 3rd/4th seat, opener promises \textit{exactly} one outside stopper.\n
+    3NT shows a 7-card (or better) minor headed by AKQ (or better).  In 1st/2nd seat, opener may have no more than an outside Q.  In 3rd/4th seat, opener promises \textit{exactly} one outside stopper.\n
 
-\section{\texorpdfstring{4\cl{}/\di{}/\he{}/\sp{} - Preempts and NAMYATS}{}}
+\bidsection{4\cl{}/\di{}/\he{}/\sp{} - Preempts and NAMYATS}
 
     The 4-level openings are reserved for 8-card major preempts.  Direct 4M is weak, showing [4-10] HCP and an 8-card suit, typically broken unless weak on the outside suits.\n
 
