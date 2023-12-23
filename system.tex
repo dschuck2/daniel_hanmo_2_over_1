@@ -14,8 +14,6 @@
 \usepackage{geometry}
 \geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm,}
 
-
-\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\n}{\\}
 \newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
 \newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
@@ -59,7 +57,44 @@
 \newpage
 
 \chapter{Openings and Continuations}
-\bidsection{\cl{1}}{1♣}
+\section{Overview} \label{2:1}
+    HCP notation: [$x$-$y$] indicates HCP range from `$x$' to `$y$' inclusive, with ($x$+) and ($y$-) indicating an upgraded or downgraded hand respectively.  [(14+)-17] is a good 14 to any 17 count. Table of openings is as follows:
+    
+\begin{center}
+    \begin{tabular}{ |c|c|c|c| } 
+        \hline
+        \cl1                     & [11-21]    & 3+\cl{}s             & open with 3-3 in minors \n
+        \di1                     & [11-21]    & 3+\di{}s             & 3-cards only when 4432  \n
+        \he1                     & [11-21]    & 5+\he{}s             & could have 6-card minor \n
+        \sp1                     & [11-21]    & 5+\sp{}s             & could have 6\he{}s      \n
+        1NT                      & [(14+)-17] & (semi)balanced       & could have 5-card major \n
+        \cl2                     & [22+]      & or 8.5 tricks        & game-forcing            \n
+        2\di{}/\he{}/\sp{}       & [4-10]     & 6-card suit          & preemptive/constructive \n
+        2NT                      & [20-21]    & (semi)balanced       & not 9-cards in major    \n
+        3\cl{}/\di{}/\he{}/\sp{} & [4-10]     & 7-card suit          & highly preemptive       \n
+        3NT                      & [9-11]     & AKQxxxx in minor     & no outside stoppers     \n
+        4\cl{}/\di{}             & [7-14]     & 8+ major, 8+ tricks  & transfer up-2           \n
+        4\he{}/\sp{}             & [4-10]     & 8+ major, weak suit  & usually fairly weak     \n
+        \hline
+    \end{tabular}
+\end{center}
+Contents:
+\ul {
+    \li \ref{2:1} - Overview
+    \li \ref{2:2} - \cl1
+    \li \ref{2:3} - \di1
+    \li \ref{2:4} - \he1
+    \li \ref{2:5} - \sp1
+    \li \ref{2:6} - 1NT - [(14+)-17]
+    \li \ref{2:7} - \cl2 - Game-Forcing
+    \li \ref{2:8} - 2\di{}/\he{}/\sp{}
+    \li \ref{2:9} - 2NT - [20-21]
+    \li \ref{2:10} - 3\cl{}/\di{}/\sp{}
+    \li \ref{2:11} - 3NT - Gambling
+    \li \ref{2:12} - 4\cl{}/\di{}/\he{}\sp{} - NAMYATS
+}
+\newpage
+\bidsection{\cl{1}}{1♣} \label{2:2}
 
     When a major is un-openable, \cl1 is opened with either longer clubs, or 3-3 in the minors. this necessarily puts strain on the minors: \cl1 will have only 3-cards 16\% of the time.  While low, it is not insignificant.\n
     
@@ -200,7 +235,7 @@
     Passed hands respond identically, but cannot make forcing bids (ie \cl2 is passable).  Since responder cannot have a game force, xyz \di2 shows a maximum invite, generally an [11(+)-12] count that is nearly openable, while \cl2 (still transfer) shows [10-11].
 \newpage
 
-\bidsection{\di{1}}{1♢}
+\bidsection{\di{1}}{1♢} \label{2:3}
 
     \di1 is the simpler of the minor openings.  It promises 3+\di{}s, but only has 3 when holding exactly 4432 shape.  Thus, opener will hold 4+\di{}s 96\% of the time.  Additionally, there is no suit to bypass, so no Walsh treatment is necessary.  As most of the \cl1 structure remains in the \di1 structure, only the differences will be shown:
 
@@ -234,7 +269,7 @@
                 \li \he2 - signoff
                 \li \sp2 - natural reverse
                 \li 2NT - transfer to \cl3 (6-card suit)
-                \li 3Z - flag suit, slam try
+                \li 3z - flag suit, slam try
             }
             \li \sp2 - natural jump shift in \sp{}, or single suitor
             \ul {
@@ -252,7 +287,7 @@
     }
 \newpage
 
-\bidsection{\he{1}}{1♡}
+\bidsection{\he{1}}{1♡} \label{2:4}
 
     Major openings require a 5+ card suit in every seat and vulnerability, requiring [11-21] HCP.  In 3rd seat, one may open with [10] HCP under protection of \cl2 Drury.  \n
     
@@ -434,7 +469,7 @@
     }
 \newpage
 
-\bidsection{\sp{1}}{1♠}
+\bidsection{\sp{1}}{1♠} \label{2:5}
 
     Unlike \he1, \sp1 has simple rebids as responder either shows a fit with defined strength through a myriad of raises, or immediately limits their hand via semi-forcing 1NT.\n
 
@@ -498,7 +533,7 @@
     For 2/1 auctions, jumps above reverses are splinters such as: \he1-\cl2-\sp3.  In case of a splinter in minor, you sacrifice Kickback, which is accessible by setting trumps via a natural raise (\sp1-\di2-\he4 is a splinter, since \di3 confirms a fit for Kickback)
 \newpage
 
-\bidsection{1NT [14(+)-17]}{1NT}
+\bidsection{1NT [(14+)-17]}{1NT [(14+)-17]} \label{2:6}
 
     Any 15-17 with (4333), (4432), or (5332) distribution are opened 1NT.  The semi-balanced hands (5422), (6322) may be opened 1NT only if the longest suit is a minor. 14 HCP hands with a strong 5+ suit may be upgraded to 1NT.  When responder range-asks, a minimum is [14(+)-15], and maximum are [16-17].  A 15-count with good controls and shape may be upgraded \textit{only} when responder is slammish.
     \\
@@ -516,7 +551,7 @@
 
     The full structure is as follows:
     \ul{
-        \li \cl2 - stayman (not 5-5 in majors) or slammish with \textit{excactly} 5 cards in a minor
+        \li \cl2 - stayman (not 5-5 in majors) or slammish with \textit{exactly} 5 cards in a minor
         \ul{
             \li \di2 - no majors; South African transfers ON
             \ul{
@@ -677,7 +712,8 @@
             \li 6NT - to play
         }
     }
-\bidsection{\cl{2}}{2♣}
+\newpage
+\bidsection{\cl{2} - Game-Forcing}{2♣ - Game-Forcing} \label{2:7}
 
     \cl2 is the strongest opening bid, showing a game forcing hand or [22-24] balanced (which should almost always be raised to game anyway).  \cl2 has waiting and positive responses, Kokish \he2, cheaper minor, \di3 stayman, and conventional 3M jump rebids by opener.\n
     
@@ -730,7 +766,7 @@
     }
 \newpage
 
-\bidsection{2\di{}/\he{}/\sp{}}{2♢/♡/♠}
+\bidsection{2\di{}/\he{}/\sp{}}{2♢/♡/♠} \label{2:8}
 
     The first of the weak-2 opening bids, \di2 is perhaps the most interesting.  It eats up bidding space without giving the opposition a major to look for.  \he2/\sp2 have the benefit of more often reaching \he4/\sp4, which makes it easier to reach game for the partnership.  Regardless of suit, it is important for the opener to have a well-defined hand for when their partner is preempted.  Since preempts depending on both vulnerability and seat, the definitions are as follows:
 
@@ -787,7 +823,7 @@
     Note that point ranges are rough guidance. \hhand{KT9, x, QJT9xxx, xxx} is worth much more than [6] opposite a \sp2 response, while \hhand{xx, QJ, KJxxxx, QJx} is worth less than the [9] advertised.  New suits after OGUST are cuebids for the preempted suit, game-forcing and possible slam interest.
 \newpage
 
-\bidsection{2NT [20-21]}{2NT}
+\bidsection{2NT [20-21]}{2NT [20-21]} \label{2:9}
 
     2NT may be opened with shapes (4333), (4432), (5332), (5422), (6332), and (5431).  Singletons must be either A or K, opener must not have a 6-card major or 5-4 in the majors.\n
     Puppet and transfers are used to investigate major fits, and \sp3 is used for hands with both minors.  Since opener has more points than responder, 4M is \textbf{not} to play, and instead shows a six card minor (two-below) with slam interest (inspired from Scanian methods). The full structure is as follows:
@@ -833,15 +869,19 @@
         \li 4NT - [12], quantative
         \li 5m - to play
     }
-\bidsection{3\cl{}/\di{}/\he{}/\sp{}}{3♣/♢/♡/♠}
+\bidsection{3\cl{}/\di{}/\he{}/\sp{}}{3♣/♢/♡/♠} \label{2:10}
 
     Unlike 2-level preempts, 3-level preempts are mostly non-constructive.  They almost always show a 7-card suit; the exceptions occur 3rd seat at favorable vulnerability or \cl3 (since \cl2 is not preemptive).  Since 4m is artificial, 3-level minor preempts may have an 8-card suit, though 8-card suits may also be opened at the 5-level. \n
 
-\bidsection{3NT - Gambling}{3NT}
+    If opener preempted \cl3 or \di3, majors are natural and forcing (typically 6-cards).  Barring 3m-3M, suits are cues/Kickback/splinters, slam invitational or better.
+
+\bidsection{3NT - Gambling}{3NT - Gambling} \label{2:11}
 
     3NT shows a 7-card (or better) minor headed by AKQ (or better).  In 1st/2nd seat, opener may have no more than an outside Q.  In 3rd/4th seat, opener promises \textit{exactly} one outside stopper.\n
 
-\bidsection{4\cl{}/\di{}/\he{}/\sp{} - Preempts and NAMYATS}{4♣/♢/♡/♠}
+    Responder may correct to any level of minor (pass or correct) or cue a major.
+
+\bidsection{4\cl{}/\di{}/\he{}/\sp{} - NAMYATS}{4♣/♢/♡/♠ - NAMYATS} \label{2:12}
 
     The 4-level openings are reserved for 8-card major preempts.  Direct 4M is weak, showing [4-10] HCP and an 8-card suit, typically broken unless weak on the outside suits.\n
 
@@ -867,14 +907,24 @@
     }
 
 \chapter{Interference}
-\section{General}
+\section{Overview} \label{3:1}
 
 Unfortunately, bridge is not a simple as a back-and-forth conversation with our partner.  Thus, we must have methods for competitive auctions, both when our opponents preempt and overcall.  Since both opener's and overcaller's hands have a suit, our methods show the probable and important hands of responder.  Bids in parenthesis are interference: \cl1-(\he1)-X-(XX). \n
 
-This chapter is broken up into 4 sections:
+The following conventions are used:
+\begin{itemize} \itemsep0em
+    \item Takeout, negative, support, optional, reopening X
+    \item Penalty, support, value XX
+    \item Transfers over 1M-(X)
+    \item Jordan 2NT
+    \item lebensohl
+    \item `Lower-lower' cues
+\end{itemize}
+Contents:
 \ul {
-    \li \ref{3:2} - Suit-based Interference - 2nd seat
-    \li \ref{3:3} - Suit-based Interference - 4th seat
+    \li \ref{3:1} - Overview
+    \li \ref{3:2} - Suit-based Interference - 2nd Seat
+    \li \ref{3:3} - Suit-based Interference - 4th Seat
     \li \ref{3:4} - NT Interference
     \li \ref{3:5} - Preempts
     \li \ref{3:6} - Two-Suited Overcalls
@@ -896,7 +946,7 @@ This chapter is broken up into 4 sections:
         \ul {
             \li pass - [0-6]
             \li XX - [10+] no 9-card fit.  Typically a natural 2NT response.  Penalty X on
-            \li 1Z - [7+] 4-card suit or better (system on)
+            \li 1z - [7+] 4-card suit or better (system on)
             \li 1NT - [7-9] balanced, no majors
             \li \cl2 - [7-9] 4+\cl{}s
             \li \di2 - [7-10] quality 5+\di{}s, 4\cl{}s
@@ -904,7 +954,7 @@ This chapter is broken up into 4 sections:
             \li \sp2 - [7-10] quality 5+\sp{}s, 4\cl{}s
             \li 2NT - [11+] 5+\cl{}s
             \li \cl3 - [4-7] 4+\cl{}s, preemptive
-            \li 3Z - 5+\cl{}s, splinter.
+            \li 3z - 5+\cl{}s, splinter.
         }
 
         \i \cl1-(\di1)
@@ -980,7 +1030,7 @@ This chapter is broken up into 4 sections:
             \ul {
                 \li \sp2 - signoff
                 \li 2NT - lebensohl, puppet to \cl3 for signoff
-                \li 3Z - [6-8], invitational
+                \li 3z - [6-8], invitational
             }
         }
     }
@@ -1037,12 +1087,15 @@ This chapter is broken up into 4 sections:
     With distribution and values, good opponents will compete over our 1NT openings.  Over (X) and (\cl2), system is on, unless they show both majors.  Our XX is penalty oriented, X by responder shows values takeout-oriented though opener may X for penalties after.  If opponents show both majors, our defense is as follows:
 
     \ul {
+        \li X - values, penalty interest
         \li \di2 - natural, signoff
         \li \he2 - [5-8] (45) or better in minors
         \li \sp2 - [8-9] (45) or better in minors
         \li 2NT - lebensohl, forced puppet to \cl3.  Rebids:
         \ul {
             \li \di3 - signoff
+            \li \he3 - stopper
+            \li \sp3 - stopper
         }
         \li \cl3 - 5+\cl{}s, game forcing
         \li \di3 - 5+\di{}s, game forcing
@@ -1108,7 +1161,7 @@ This chapter is broken up into 4 sections:
             \li \cl4 - 5+\cl{}s, typically 6.
             \li \di4 - 5+\di{}s, typically 6.
             \li \he4 - to play
-            \li \sp4 - kickback (no cue available to set suit)
+            \li \sp4 - Kickback (no cue available to set suit)
         }
 
         \li \cl1-(\he4)
@@ -1188,7 +1241,7 @@ This chapter is broken up into 4 sections:
             \li \he3 - [10+] 3+\sp{}s
             \li \sp3 - [7-9] 3+\sp{}s, competitive
             \li 3NT - [12-15] \he{} stopper
-            \li 4Z - [12+] 4\sp{}s, splinter
+            \li 4z - [12+] 4\sp{}s, splinter
             \li \sp4 - [0-9] 4\sp{}s, preemptive
         }
     }
@@ -1232,6 +1285,50 @@ This chapter is broken up into 4 sections:
         }
     }
 \chapter{Overcalling and Advancing}
+\section{Overview} \label{4:1}
+    
+    When the opponents open the bidding, it is important to both interfere with their strong auctions, as well as reach games (and rarely, slams) when we have the points or shape.\n
+
+    Since most players play some variation of 2/1, these methods are dedicated against 2/1.  At the end of this chapter, a section is dedicated to artificial or short \cl1 and \di1 openings. \n
+
+    The following conventions are used:
+    \begin{itemize} \itemsep0em
+        \item Takeout, power, penalty, responsive, optional X
+        \item Michael's, unusual 2NT, leaping Michael's
+        \item Cappelletti, Multi-Landy
+        \item Gambling 3NT / cues
+        \item lebensohl\n
+    \end{itemize}
+
+    Expected strength:
+    \begin{itemize} \itemsep0em
+        \li (1y)-1z - [(7+)-17]
+        \li (1y)-1NT - [15-18]
+        \li (2y)-2NT - [16-19]
+        \li (1y)-p-(p)-1NT - [11-15] \n
+    \end{itemize}
+
+    Contents:
+    \ul {
+        \li \ref{4:1} - Overview
+        \li \ref{4:2} - Suit-based Overcalls - 2nd Seat
+        \li \ref{4:3} - Suit-based Overcalls - 4th Seat
+        \li \ref{4:4} - NT Overcalls and Defense
+        \li \ref{4:5} - Preempts
+        \li \ref{4:6} - Two-Suited Overcalls
+        \li \ref{4:7} - Balancing
+        \li \ref{4:8} - Unnatural \cl1 and \di1
+    }
+
+\section{Suit-based Overcalls - 2nd Seat} \label{4:2}
+\section{Suit-based Overcalls - 4th Seat} \label{4:3}
+\section{NT Overcalls and Defense} \label{4:4}
+\section{Preempts} \label{4:5}
+\section{Two-Suited Overcalls} \label{4:6}
+\section{Balancing} \label{4:7}
+\bidsection{Unnatural \cl1 and \di1}{Unnatural 1♣ and 1♢} \label{4:8}
+
+
 
 \chapter{Carding}
 
