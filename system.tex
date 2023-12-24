@@ -7,20 +7,18 @@
 \usepackage{extsizes}
 \usepackage{amssymb,amsfonts,amsmath}
 \usepackage{mathrsfs}
-\usepackage{hyperref}
+\usepackage[unicode=true]{hyperref}
 \usepackage[capitalise]{cleveref}
 \usepackage{grbbridge}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm,}
 
-
-\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\n}{\\}
 \newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
 \newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
 \newcommand{\li}{\item[~]}
-\newcommand{\bidsection}[1]{\section{\texorpdfstring{#1}{}}}
+\newcommand{\bidsection}[2]{\section{\texorpdfstring{#1}{#2}}}
 
 
 \title{\bf{2/1 Game Forcing}}
@@ -59,7 +57,44 @@
 \newpage
 
 \chapter{Openings and Continuations}
-\bidsection{\cl{1}}
+\section{Overview} \label{2:1}
+    HCP notation: [$x$-$y$] indicates HCP range from `$x$' to `$y$' inclusive, with ($x$+) and ($y$-) indicating an upgraded or downgraded hand respectively.  [(14+)-17] is a good 14 to any 17 count. Table of openings is as follows:
+    
+\begin{center}
+    \begin{tabular}{ |c|c|c|c| } 
+        \hline
+        \cl1                     & [11-21]    & 3+\cl{}s             & open with 3-3 in minors \n
+        \di1                     & [11-21]    & 3+\di{}s             & 3-cards only when 4432  \n
+        \he1                     & [11-21]    & 5+\he{}s             & could have 6-card minor \n
+        \sp1                     & [11-21]    & 5+\sp{}s             & could have 6\he{}s      \n
+        1NT                      & [(14+)-17] & (semi)balanced       & could have 5-card major \n
+        \cl2                     & [22+]      & or 8.5 tricks        & game-forcing            \n
+        2\di{}/\he{}/\sp{}       & [4-10]     & 6-card suit          & preemptive/constructive \n
+        2NT                      & [20-21]    & (semi)balanced       & not 9-cards in major    \n
+        3\cl{}/\di{}/\he{}/\sp{} & [4-10]     & 7-card suit          & highly preemptive       \n
+        3NT                      & [9-11]     & AKQxxxx in minor     & no outside stoppers     \n
+        4\cl{}/\di{}             & [7-14]     & 8+ major, 8+ tricks  & transfer up-2           \n
+        4\he{}/\sp{}             & [4-10]     & 8+ major, weak suit  & usually fairly weak     \n
+        \hline
+    \end{tabular}
+\end{center}
+Contents:
+\ul {
+    \li \ref{2:1} - Overview
+    \li \ref{2:2} - \cl1
+    \li \ref{2:3} - \di1
+    \li \ref{2:4} - \he1
+    \li \ref{2:5} - \sp1
+    \li \ref{2:6} - 1NT - [(14+)-17]
+    \li \ref{2:7} - \cl2 - Game-Forcing
+    \li \ref{2:8} - 2\di{}/\he{}/\sp{}
+    \li \ref{2:9} - 2NT - [20-21]
+    \li \ref{2:10} - 3\cl{}/\di{}/\sp{}
+    \li \ref{2:11} - 3NT - Gambling
+    \li \ref{2:12} - 4\cl{}/\di{}/\he{}\sp{} - NAMYATS
+}
+\newpage
+\bidsection{\cl{1}}{1♣} \label{2:2}
 
     When a major is un-openable, \cl1 is opened with either longer clubs, or 3-3 in the minors. this necessarily puts strain on the minors: \cl1 will have only 3-cards 16\% of the time.  While low, it is not insignificant.\n
     
@@ -200,7 +235,7 @@
     Passed hands respond identically, but cannot make forcing bids (ie \cl2 is passable).  Since responder cannot have a game force, xyz \di2 shows a maximum invite, generally an [11(+)-12] count that is nearly openable, while \cl2 (still transfer) shows [10-11].
 \newpage
 
-\bidsection{\di{1}}
+\bidsection{\di{1}}{1♢} \label{2:3}
 
     \di1 is the simpler of the minor openings.  It promises 3+\di{}s, but only has 3 when holding exactly 4432 shape.  Thus, opener will hold 4+\di{}s 96\% of the time.  Additionally, there is no suit to bypass, so no Walsh treatment is necessary.  As most of the \cl1 structure remains in the \di1 structure, only the differences will be shown:
 
@@ -234,7 +269,7 @@
                 \li \he2 - signoff
                 \li \sp2 - natural reverse
                 \li 2NT - transfer to \cl3 (6-card suit)
-                \li 3Z - flag suit, slam try
+                \li 3z - flag suit, slam try
             }
             \li \sp2 - natural jump shift in \sp{}, or single suitor
             \ul {
@@ -252,7 +287,7 @@
     }
 \newpage
 
-\bidsection{\he{1}}
+\bidsection{\he{1}}{1♡} \label{2:4}
 
     Major openings require a 5+ card suit in every seat and vulnerability, requiring [11-21] HCP.  In 3rd seat, one may open with [10] HCP under protection of \cl2 Drury.  \n
     
@@ -434,7 +469,7 @@
     }
 \newpage
 
-\bidsection{\sp{1}}
+\bidsection{\sp{1}}{1♠} \label{2:5}
 
     Unlike \he1, \sp1 has simple rebids as responder either shows a fit with defined strength through a myriad of raises, or immediately limits their hand via semi-forcing 1NT.\n
 
@@ -498,7 +533,7 @@
     For 2/1 auctions, jumps above reverses are splinters such as: \he1-\cl2-\sp3.  In case of a splinter in minor, you sacrifice Kickback, which is accessible by setting trumps via a natural raise (\sp1-\di2-\he4 is a splinter, since \di3 confirms a fit for Kickback)
 \newpage
 
-\bidsection{1NT [14(+)-17]}
+\bidsection{1NT [(14+)-17]}{1NT [(14+)-17]} \label{2:6}
 
     Any 15-17 with (4333), (4432), or (5332) distribution are opened 1NT.  The semi-balanced hands (5422), (6322) may be opened 1NT only if the longest suit is a minor. 14 HCP hands with a strong 5+ suit may be upgraded to 1NT.  When responder range-asks, a minimum is [14(+)-15], and maximum are [16-17].  A 15-count with good controls and shape may be upgraded \textit{only} when responder is slammish.
     \\
@@ -516,7 +551,7 @@
 
     The full structure is as follows:
     \ul{
-        \li \cl2 - stayman (not 5-5 in majors) or slammish with \textit{excactly} 5 cards in a minor
+        \li \cl2 - stayman (not 5-5 in majors) or slammish with \textit{exactly} 5 cards in a minor
         \ul{
             \li \di2 - no majors; South African transfers ON
             \ul{
@@ -677,7 +712,8 @@
             \li 6NT - to play
         }
     }
-\bidsection{\cl{2}}
+\newpage
+\bidsection{\cl{2} - Game-Forcing}{2♣ - Game-Forcing} \label{2:7}
 
     \cl2 is the strongest opening bid, showing a game forcing hand or [22-24] balanced (which should almost always be raised to game anyway).  \cl2 has waiting and positive responses, Kokish \he2, cheaper minor, \di3 stayman, and conventional 3M jump rebids by opener.\n
     
@@ -730,7 +766,7 @@
     }
 \newpage
 
-\bidsection{2\di{}/\he{}/\sp{}}
+\bidsection{2\di{}/\he{}/\sp{}}{2♢/♡/♠} \label{2:8}
 
     The first of the weak-2 opening bids, \di2 is perhaps the most interesting.  It eats up bidding space without giving the opposition a major to look for.  \he2/\sp2 have the benefit of more often reaching \he4/\sp4, which makes it easier to reach game for the partnership.  Regardless of suit, it is important for the opener to have a well-defined hand for when their partner is preempted.  Since preempts depending on both vulnerability and seat, the definitions are as follows:
 
@@ -787,10 +823,9 @@
     Note that point ranges are rough guidance. \hhand{KT9, x, QJT9xxx, xxx} is worth much more than [6] opposite a \sp2 response, while \hhand{xx, QJ, KJxxxx, QJx} is worth less than the [9] advertised.  New suits after OGUST are cuebids for the preempted suit, game-forcing and possible slam interest.
 \newpage
 
-\bidsection{2NT [20-21]}
+\bidsection{2NT [20-21]}{2NT [20-21]} \label{2:9}
 
     2NT may be opened with shapes (4333), (4432), (5332), (5422), (6332), and (5431).  Singletons must be either A or K, opener must not have a 6-card major or 5-4 in the majors.\n
-
     Puppet and transfers are used to investigate major fits, and \sp3 is used for hands with both minors.  Since opener has more points than responder, 4M is \textbf{not} to play, and instead shows a six card minor (two-below) with slam interest (inspired from Scanian methods). The full structure is as follows:
     \ul {
         \li \cl3 - puppet stayman; minors show a 5+ (usually 6) card suit
@@ -834,15 +869,19 @@
         \li 4NT - [12], quantative
         \li 5m - to play
     }
-\bidsection{3\cl{}/\di{}/\he{}/\sp{}}
+\bidsection{3\cl{}/\di{}/\he{}/\sp{}}{3♣/♢/♡/♠} \label{2:10}
 
     Unlike 2-level preempts, 3-level preempts are mostly non-constructive.  They almost always show a 7-card suit; the exceptions occur 3rd seat at favorable vulnerability or \cl3 (since \cl2 is not preemptive).  Since 4m is artificial, 3-level minor preempts may have an 8-card suit, though 8-card suits may also be opened at the 5-level. \n
 
-\section{3NT - Gambling}
+    If opener preempted \cl3 or \di3, majors are natural and forcing (typically 6-cards).  Barring 3m-3M, suits are cues/Kickback/splinters, slam invitational or better.
+
+\bidsection{3NT - Gambling}{3NT - Gambling} \label{2:11}
 
     3NT shows a 7-card (or better) minor headed by AKQ (or better).  In 1st/2nd seat, opener may have no more than an outside Q.  In 3rd/4th seat, opener promises \textit{exactly} one outside stopper.\n
 
-\bidsection{4\cl{}/\di{}/\he{}/\sp{} - Preempts and NAMYATS}
+    Responder may correct to any level of minor (pass or correct) or cue a major.
+
+\bidsection{4\cl{}/\di{}/\he{}/\sp{} - NAMYATS}{4♣/♢/♡/♠ - NAMYATS} \label{2:12}
 
     The 4-level openings are reserved for 8-card major preempts.  Direct 4M is weak, showing [4-10] HCP and an 8-card suit, typically broken unless weak on the outside suits.\n
 
@@ -868,21 +907,31 @@
     }
 
 \chapter{Interference}
-\bidsection{General}
+\section{Overview} \label{3:1}
 
 Unfortunately, bridge is not a simple as a back-and-forth conversation with our partner.  Thus, we must have methods for competitive auctions, both when our opponents preempt and overcall.  Since both opener's and overcaller's hands have a suit, our methods show the probable and important hands of responder.  Bids in parenthesis are interference: \cl1-(\he1)-X-(XX). \n
 
-This chapter is broken up into 4 sections:
+The following conventions are used:
+\begin{itemize} \itemsep0em
+    \item Takeout, negative, support, optional, reopening X
+    \item Penalty, support, value XX
+    \item Transfers over 1M-(X)
+    \item Jordan 2NT
+    \item lebensohl
+    \item `Lower-lower' cues
+\end{itemize}
+Contents:
 \ul {
-    \li \ref{3:2} - Suit-based Interference - 2nd seat
-    \li \ref{3:3} - Suit-based Interference - 4th seat
+    \li \ref{3:1} - Overview
+    \li \ref{3:2} - Suit-based Interference - 2nd Seat
+    \li \ref{3:3} - Suit-based Interference - 4th Seat
     \li \ref{3:4} - NT Interference
     \li \ref{3:5} - Preempts
     \li \ref{3:6} - Two-Suited Overcalls
 }
 
 \newpage
-\bidsection{Suit-based Interference - 2nd Seat} \label{3:2}
+\section{Suit-based Interference - 2nd Seat} \label{3:2}
     
     Over an opposing double, responder may pass with [0-6] points and no fit, as a strong opener may clarify a strong hand later.  With [7+], responder owes a response.  XX shows balanced [10+], without a 9-card fit.  If a minor was opened, new suits are natural freebids, and 1NT is natural; if a major was opened, 1NT-2(M-1) are transfers, with 2M as a preemptive raise.\n
 
@@ -897,7 +946,7 @@ This chapter is broken up into 4 sections:
         \ul {
             \li pass - [0-6]
             \li XX - [10+] no 9-card fit.  Typically a natural 2NT response.  Penalty X on
-            \li 1Z - [7+] 4-card suit or better (system on)
+            \li 1z - [7+] 4-card suit or better (system on)
             \li 1NT - [7-9] balanced, no majors
             \li \cl2 - [7-9] 4+\cl{}s
             \li \di2 - [7-10] quality 5+\di{}s, 4\cl{}s
@@ -905,7 +954,7 @@ This chapter is broken up into 4 sections:
             \li \sp2 - [7-10] quality 5+\sp{}s, 4\cl{}s
             \li 2NT - [11+] 5+\cl{}s
             \li \cl3 - [4-7] 4+\cl{}s, preemptive
-            \li 3Z - 5+\cl{}s, splinter.
+            \li 3z - 5+\cl{}s, splinter.
         }
 
         \i \cl1-(\di1)
@@ -981,12 +1030,12 @@ This chapter is broken up into 4 sections:
             \ul {
                 \li \sp2 - signoff
                 \li 2NT - lebensohl, puppet to \cl3 for signoff
-                \li 3Z - [6-8], invitational
+                \li 3z - [6-8], invitational
             }
         }
     }
 \newpage
-\bidsection{Suit-based Interference - 4th Seat} \label{3:3}
+\section{Suit-based Interference - 4th Seat} \label{3:3}
 
     When the 4th suit overcalls a suit after in auction x-y-(z), opener already has shown [11+] strength and responder is able to bid.  Since all bids (including pass!) show [11+], bids can be more descriptive.\n
 
@@ -1020,7 +1069,7 @@ This chapter is broken up into 4 sections:
     }
 
 \newpage
-\bidsection{NT Interference} \label{3:4}
+\section{NT Interference} \label{3:4}
 
     Occasionally after 1-suit, our opponents will overcall at natural 1NT.  Our responses are as follows:
 
@@ -1038,12 +1087,15 @@ This chapter is broken up into 4 sections:
     With distribution and values, good opponents will compete over our 1NT openings.  Over (X) and (\cl2), system is on, unless they show both majors.  Our XX is penalty oriented, X by responder shows values takeout-oriented though opener may X for penalties after.  If opponents show both majors, our defense is as follows:
 
     \ul {
+        \li X - values, penalty interest
         \li \di2 - natural, signoff
         \li \he2 - [5-8] (45) or better in minors
         \li \sp2 - [8-9] (45) or better in minors
         \li 2NT - lebensohl, forced puppet to \cl3.  Rebids:
         \ul {
             \li \di3 - signoff
+            \li \he3 - stopper
+            \li \sp3 - stopper
         }
         \li \cl3 - 5+\cl{}s, game forcing
         \li \di3 - 5+\di{}s, game forcing
@@ -1083,7 +1135,7 @@ This chapter is broken up into 4 sections:
         \li \he2 - 5+\sp{}s
     }
 \newpage
-\bidsection{Preempts} \label{3:5}
+\section{Preempts} \label{3:5}
 
     Preempts are the some of most obstructive bids opponents can make; they remove valuable bidding space when we have a invitational or strong auction.  As such, we must sacrifice some slam accuracy in favor of reaching as many making games as possible.\n
 
@@ -1109,7 +1161,7 @@ This chapter is broken up into 4 sections:
             \li \cl4 - 5+\cl{}s, typically 6.
             \li \di4 - 5+\di{}s, typically 6.
             \li \he4 - to play
-            \li \sp4 - kickback (no cue available to set suit)
+            \li \sp4 - Kickback (no cue available to set suit)
         }
 
         \li \cl1-(\he4)
@@ -1147,7 +1199,7 @@ This chapter is broken up into 4 sections:
         }
     }
 \newpage
-\bidsection{Two-Suited Overcalls} \label{3:6}
+\section{Two-Suited Overcalls} \label{3:6}
 
     Whether in 2nd or 4th seat, our opponents can make 2-suited overcalls.  Since `our' suits and `their' suits are known, competition can become fierce with both sides potentially having a double fit so our methods must adapt. \n
     
@@ -1189,7 +1241,7 @@ This chapter is broken up into 4 sections:
             \li \he3 - [10+] 3+\sp{}s
             \li \sp3 - [7-9] 3+\sp{}s, competitive
             \li 3NT - [12-15] \he{} stopper
-            \li 4Z - [12+] 4\sp{}s, splinter
+            \li 4z - [12+] 4\sp{}s, splinter
             \li \sp4 - [0-9] 4\sp{}s, preemptive
         }
     }
@@ -1233,6 +1285,448 @@ This chapter is broken up into 4 sections:
         }
     }
 \chapter{Overcalling and Advancing}
+\section{Overview} \label{4:1}
+    
+    When the opponents open the bidding, it is important to both interfere with their strong auctions, as well as reach games (and rarely, slams) when we have the points or shape.\n
+
+    Since most players play some variation of 2/1, these methods are dedicated against 2/1.  At the end of this chapter, a section is dedicated to artificial or short \cl1 and \di1 openings. \n
+
+    The following conventions are used:
+    \begin{itemize} \itemsep0em
+        \item Takeout, power, penalty, responsive, optional X, ELC
+        \item Michael's, unusual 2NT, leaping Michael's
+        \item Cappelletti, Multi-Landy
+        \item Gambling 3NT / cues
+        \item lebensohl\n
+    \end{itemize}
+
+    Expected strength:
+    \begin{itemize} \itemsep0em
+        \li (1y)-1z - [(7+)-17]
+        \li (1y)-1NT - [15-18]
+        \li (2y)-2NT - [16-19]
+        \li (1y)-p-(p)-1NT - [11-15] \n
+    \end{itemize}
+
+    Contents:
+    \ul {
+        \li \ref{4:1} - Overview
+        \li \ref{4:2} - Suit-based Overcalls - 2nd Seat
+        \li \ref{4:3} - Suit-based Overcalls - 4th Seat
+        \li \ref{4:4} - NT Overcalls and Defense
+        \li \ref{4:5} - Preempts
+        \li \ref{4:6} - Two-Suited Overcalls
+        \li \ref{4:7} - Balancing
+        \li \ref{4:8} - Unnatural \cl1 and \di1
+    }
+
+\section{Suit-based Overcalls - 2nd Seat} \label{4:2}
+
+    After the opponents have shown suit-strength, it is important to interfere (thus overcalling light is possible) but without a good possibility of being doubled (not too light). \n
+
+    Suit overcalls promise a 5-card suit (or better) with [(7+)-17] at the 1-level and [(10+)-17] at the 2-level.  X is the flexible forcing bid, showing either takeout for the majors or showing a powerhouse.  With [18+], first double, then bid a suit, cue, or NT.
+
+    \ul {
+        \li (\cl1)
+        \ul {
+            \li X - [11+], (33)+ majors (may have 2\di{}s) or [18+].  Usually 2-\cl{}s and (43)+ in majors
+            \li 1z - [(7+)-17] 5+ card suit with some quality
+        }
+        \li (\he1)
+        \ul {
+            \li X - [11+] for takeout, 3-4\sp{}s (typically 4).  Possible 5-4 in \di{}/\sp{}.
+            \li \sp1 - [(7+)-17] 5+ cards, some quality
+            \li 2z - [(10+)-17] 5+ cards, good quality
+        }
+    }
+
+    If 3rd seat interjects, X is responsive, showing values and either minors or majors.  Auctions like these are responsive: (\cl1)-X-(\he1)-X, (\he1)-X-(\he2)-X (showing the minors), or (\cl1)-X-(\cl3)-X showing the majors.
+
+\subsection{Takeout Doubles}
+
+    At the 1-level, X is not needed for penalty, and is instead for takeout, showing the majors, so even with a 5-card minor and 4-card major, one may choose to X instead to prioritize the other major. However, since X is not penalty, advancer is forced to respond with as few as [0] points.\n
+
+    A NT advance shows values and a (typical) stopper, low suits show [0-7], single jumps show [8-11], and a cue shows [11+].  Double jumps below game are competitive/preemptive, and jumps to game show [12+] with a 5-card (or better) suit. \n
+    
+    \ul {
+        \li (\cl1)-X-(p)
+        \ul {
+            \li pass - [10+] with strong clubs
+            \li 1z - [0-7] weak, 3+ suit
+            \li 1NT - [7-10] \cl{} typical stopper; no majors
+            \li \cl2 - [12+] invitational+, information ask
+            \li \di2 - [8-11] 4+\di{}s
+            \li \he2 - [8-11] 4+\he{}s
+            \li \sp2 - [8-11] 4+\sp{}s
+            \li 2NT - [11-12] with a stopper
+        }
+
+    When the auction returns to a strong overcaller, they may bid a new suit, cue, bid NT, or raise (a very weak hand) to show [18+] non-forcing.  After a jump advance, raises to game show a maximum takeout double [(14+)-17].
+
+    One final adjunct: Equal Level Conversion (ELC).  After an opposing (1M) opening, X is either normal takeout, or ELC double.  An ELC double shows a 4-card major a 5+\di{}s.  If advancer bids clubs, a diamond bid \textit{at equal level} shows [11-17] 5+\di{}s, non-forcing. \n
+
+        \li (\he1)-X-(p)
+        \ul {
+            \li \cl2 - [0-7] 4+\cl{}s (not a jump)
+            \ul {
+                \li \di2 - [11-17] ELC, 5+\di{}s
+                \li \he2 - [18+] balanced w/o stopper, GF, or very strong club raise
+                \li \sp2 - [18-21] 5+\sp{}s
+                \li 2NT - [19-21] balanced with stopper
+                \li \cl3 - [15-17] 4+\cl{}s
+                \li \di3 - [18-21] 5+\di{}s
+            }
+            \li \cl3 - [8-11] 4+\cl{}s 
+            \ul {
+                \li \di3 - [11-17] ELC 5+\di{}s
+                \li \he3 - [18+] balanced w/o stopper or strong raise
+                \li \sp3 - [18+] 5+\sp{}s
+                \li \di4 - [18+] 5+\di{}s
+            }
+        }
+    }
+
+    When 3rd seat interjects, X shows 4-4 in the other suits (or minors after 1M-2M). Since there is no need to respond, weak hands are passed and the lowest-level suits show [8-11].  Jumps show a [6-9] 5-card suit with preemptive value.  Example:
+
+    \ul {
+        \li (\di1)-X-(\sp1)
+        \ul {
+            \li X - [8+] responsive, 4-4 in \cl{}/\sp{}
+            \li 1NT - [9-11] with stoppers, no fit
+            \li \cl2 - [8-11] 4+\cl{}s
+            \li \di2 - [12+] invitational+, information ask
+            \li \he2 - [8-11] 4+\he{}s
+            \li \sp2 - [8-11] 5+\sp{}s, natural since responder bid suit
+            \li \cl3 - [6-9] 5+\cl{}s, preemptive
+            \li \he3 - [6-9] 5+\he{}s, preemptive
+        }
+        \li (\he1)-X-(\he3)
+        \ul {
+            \li X - [10+] responsive 4-4 in \cl{}/\di{}
+            \li \sp3 - [10-13] 4+\sp{}s
+            \li 3NT - to play
+            \li \cl4 - [10-14] 5+\cl{}s
+            \li \di4 - [10-14] 5+\di{}s
+            \li \sp4 - to play
+        }
+    }
+
+\subsection{Advancing Suits}
+
+    After a wide ranging 1-level or 2-level overcall, game may still be on with a [8+] advancer.  New suits at the lowest level deny a fit (except possibly in (\cl1)-\di1-1M auctions), showing their own 5-card suit and [8-13] points.  A cue is invitational+ with a fit OR [14+] with another 5-card suit.  1/2/3NT bids show [9-11], [12-14], [15-18] almost certainly with a stopper. \n
+
+    While typically showing invitational+ and a fit, a cue is simply a forcing bid.  Single jumps are fit-showing and invitational, double jumps are splinters.  However, since cues show stronger raises, jump raise are freed up to be preemptive raises.  An example:
+
+    \ul {
+        \li (\cl1)-\di1
+        \ul {
+            \li \he1 - [8-13] no fit, 5+\he{}s
+            \li \sp1 - [8-13] no fit, 5+\sp{}s
+            \li 1NT - [9-11] no fit
+            \li \cl2 - [10+] 3+\di{}s or [14+]
+            \ul {
+                \li \di2 - [8-10] any minimum
+                \li 2M - [11-17] 4-card suit (help suit if major overcalled)
+                \li 2NT - [11-14] with a stopper
+                \li \cl3 - [14+] cue, GF
+                \li \di3 - [11-14] 6+\di{}s
+                \li 3NT - [15-17] with a stopper
+            }
+            \li \di2 - [8-10] 3+\di{}
+            \li 2M - [10-13] 5+ suit, 4\di{}s
+            \li 2NT - [12-14] no fit, usual stopper
+            \li \cl3 - [6-9] 4+\di{}s, mixed raise
+            \li \di3 - [4-8] 4+\di{}s, unbalanced
+            \li 3M - [14+] 4+\di{}s, splinter
+            \li 3NT - [15-18] no fit, stopper
+        }
+    }
+
+\newpage
+\section{Suit-based Overcalls - 4th Seat} \label{4:3}
+
+    4th seat overcalling is nearly identical to 2nd seat overcalling.  However, since partner has denied strength (by not overcalling), overcalls promise better suits and more strength.  [9-17] for 1-level overcalls, and [12-17] for 2-level, with good suit quality. \n
+
+    Since opponents have bid two suits (or 1 in examples such as \he1-\he2 or \sp1-1NT), X is still takeout, but for the other suits.  After a NT response or raise, X is identical to 2nd seat, but with [13+]. \n
+
+    After a strong action (2/1, GF raise, etc), doubles are takeout for natural suits, lead-directing for artificial bids, and new suits are strong and long. \n
+    
+    It is also important to note that responder only promises a 4-card suit, and opener minors only promise a 3-card suit.  Thus, cues are \textit{natural} showing 6+ cards and great suit quality.  Some examples:
+
+    \ul {
+        \li (\cl1)-p-(\sp1)
+        \ul {
+            \li X - 4-4 or better in \di{}/\he{}
+            \li 2-suit - [12-17] 5+ cards, great quality
+        }
+        \li (\he1)-p-(1NT)
+        \ul {
+            \li X - [13+] takeout of \he{}s, 4\sp{}s
+            \li 2z - [12-17] 5+ cards, great quality
+        }
+        \li (\sp1)-(\di2)
+        \ul {
+            \li X - [13+] typically 4-5
+            \li \he2 - [12+] 6+\he{}s
+            \li \cl3 - [12+] 6-7+\cl{}s
+        }
+    }
+
+    After a 4th seat X, 2nd seat's bid of the opponents (quasi) suits are \textit{natural} and to play, showing no support for either of overcaller's suits.  X is responsive, but still limited by overcaller's pass.  Occasionally overcaller will be stronger than expected [12-14], balanced with openers suit.
+\newpage
+\section{NT Overcalls and Defense} \label{4:4}
+
+    Sometimes the opponents will open when one holds a strong balanced hand.  1NT shows this hand \textit{and a stopper}.  Without a stopper or stronger, double and show the hand later.  After this, system is on.  Note that overcaller can have up to 18 points, so point ranges slightly decrease.\n
+
+    However, when the opponents open a NT, it is important to interfere or reach game ourselves, depending on their point range.  For the purposes of definition, a strong NT is any NT containing [16].  [15-17], [14-16] are considered strong, while [13-15] and lower are considered weak. \n
+
+    Opposite a strong NT, a modified version of Multi-Landy is used:
+    \ul {
+        \li X - [10+] 4-5 in a minor and major, or 6+\di{}s
+        \ul {
+            \li pass - [12+] penalty
+            \li \cl2 - minor tolerance
+            \li \di2 - major tolerance
+            \li 2M - 6+ suit, to play
+        }
+        \li \cl2 - [9+] both majors
+        \ul {
+            \li \di2 - asking for longer major, or spade invite
+            \li 2M - preference
+        }
+        \li \di2 - [9+] 6+ cards in an unspecified major
+        \ul {
+            \li \he2 - pass or correct
+            \li \sp2 - to play
+        }
+        \li \he2 - 5+\he{}s and 4+ unspecified minor
+        \ul {
+            \li 2NT - show minor
+        }
+        \li \sp2 - 5+\sp{}s and 4+ unspecified major
+        \li 2NT - 55 in minors
+    }
+
+    Against a weak NT, X is needed as penalty, so the Cappelletti defense is used:
+    \ul {
+        \li X - [16+] penalty
+        \li \cl2 - [9+] a single suitor
+        \li \di2 - [9+] both majors
+        \li \he2 - hearts and a minor
+        \li \sp2 - spades and a minor
+        \li 2NT - 55 in minors
+    }
+
+    When vulnerable, the overcaller should have more shape or points.  When favorable, overcalls may have 4-4 shape, though this should be uncommon and reserved for [12+] or 4441 hands. \n
+
+    In the balancing seat of a \textbf{strong} NT: (1NT)-p-(p), only Landy is used (all other naturals), with X for clubs.  This allows 2nd seat to pass X for penalty when holding a strong hand:
+    \ul {
+        \li X - [9+] 5+\cl{}s
+        \li \cl2 - [9+] majors
+        \li 2z - [9+] 5+ suit, natural
+    }
+\newpage
+
+\section{Preempts} \label{4:5}
+
+    As seen during \ref{3:5}, preempts can be powerful ways to disrupt the auction.
+
+\subsection{Jump Overcalls}
+    
+    Since [18+] overcalls are through power doubles, jumps are freed up to be preemptive.  If partner is passed, jumps may be weaker than usual, though opposite an unpassed partner, one should bid according to the rules of opening a preempt. \n
+
+    A 3NT jump overcall is gambling, showing AKQxxxx or better and a stopper in the overcalled suit.  Responses are identical to opening 3NT. \n
+
+    In case of a strong responder, advance with system on assuming overcaller opened.  2NT is still OGUST, and strong raises can be a cue. RONF is also on, meaning a raise of a preempt is \textit{not} invitational; raises are meant to further the preemptive.
+
+\subsection{Overcalling Preempts}
+
+    When the opponents deal and open a preempt, it is critical that games can be made.  However, no shape or strength information about our side is known.  As such, we must sacrifice some slam-searching tools and raises in favor of making games. \n
+
+    NT overcalls are natural, showing strength and a stopper.  Direct overcalls have opening strength with a 5-card (or longer) suit, while jump overcalls are strong single suitors (GF) or artificial (discussed later).  Cues ask for a stopper, showing a long running minor, while a direct bid of 3NT shows a long minor with a stopper. X is takeout up through \di4.  In order to deal with difficult hands, lebensohl (slow-shows) and leaping Michael's are used:
+
+    \ul {
+        \li (\di2)
+        \ul {
+            \li X - takeout [18+]
+            \ul {
+                \li 2M - signoff
+                \li 2NT - lebensohl, relay to \cl3
+                \ul {
+                    \li \cl3 - accept transfer
+                        \li \qquad \di3 - GF ask, stopper
+                        \li \qquad \he3 - [8-11] 5+\he{}s, stopper
+                        \li \qquad \sp3 - [8-11] 5+\sp{}s, stopper
+                    
+                    \li \di3 - massive hand, no stopper
+                    \li \he3 - [19+] 5+\he{}s, GF
+                    \li \sp3 - [19+] 5+\sp{}s, GF
+                    \li 3NT - to play
+                }
+                \li \cl3 - 4+\cl{}s, GF
+                \li \di3 - GF ask, no stopper
+                \li \he3 - [8-11] 5+\he{}s, no stopper
+                \li \sp3 - [8-11] 5+\sp{}s, no stopper
+            }
+            \li \he2 - [11-17] 5+\he{}s
+            \li \sp2 - [11-17] 5+\sp{}s
+            \li 2NT - [16-19] with a stopper
+            \li \cl3 - [12-17] 5+\cl{}s
+            \li \di3 - long minor, stopper ask
+            \li \he3 - [18+] 6+\he{}s strong single suitor, GF
+            \li \sp3 - [18+] 6+\sp{}s, strong single suitor, GF
+            \li 3NT - long minor, to play
+            \li \cl4 - 5+\cl{}s and 5+ unspecified major, GF
+            \li \di4 - (55)+ in majors
+            \li 4M - [13-17] 8+ suit (with stronger, bid 3M forcing)
+        }
+        \li (\sp2)
+        \ul {
+            \li X - takeout (4\he{}s) or [18+]
+            \ul {
+                \li 2NT - lebensohl.  After \cl3 relay:
+                    \li \qquad pass - [0-7] to play
+                    \li \qquad \di3 - [0-7] to play
+                    \li \qquad \he3 - [0-7] to play
+                    \li \qquad \sp3 - [12+] 4\he{}s, stopper
+                
+                \li \cl3 - [8-11] 4+\cl{}s
+                \li \di3 - [8-11] 4+\di{}s
+                \li \he3 - [8-11] 4+\he{}s
+                \li \sp3 - [12+] 4+\he{}s, no stopper
+            }
+            \li 3z - [12-17] 5+ suit
+            \li \sp3 - long minor, stopper ask
+            \li \cl4 - 5+\cl{}s and 5+\he{}s, GF
+            \li \di4 - 5+\di{}s and 5+\sp{}s, GF
+        }
+        \li (\cl3)
+        \ul {
+            \li X - takeout
+            \ul {
+                \li \cl4 - major ask or very strong
+            }
+            \li \cl4 - both majors
+            \li \di4 - 5+\di{}s and 5+ unspecified major, GF
+        }
+        \li (\he3)
+        \ul {
+            \li \cl4 - natural (not a jump)
+            \li \di4 - natural (not a jump)
+            \li \he4 - 5+\sp{}s, 5+ unspecified minor, GF
+        }
+        \li (\sp4)
+        \ul {
+            \li X - [13+] optional/penalty
+            \li 4NT - strong two suitor
+            \li 5z - natural
+        }
+    }
+
+
+\section{Two-Suited Overcalls} \label{4:6}
+
+    When holding a shapely hand, auctions may rise too fast to show both suits naturally.  Additionally, when the opponents have game, showing shapely hands can help our partner lead or make sacrifices.  We employ Michael's cuebid to show 55s with a major, and Unusual NT to show a 55 in the lowest bid suits. \n
+
+    However, since these bids are always at the 2-level or higher, vulnerability must be considered (the partnership is forced to the 3-level on a misfit).  When nonvulnerable, these bids show [6-11] or [16+].  When vulnerable, [12-17] or [22+] (a 6-point differential).  A memory aid: vulnerable requires opening strength [12+], non-vul is just under opening strength [11-]. \n
+    
+    These point ranges are not exact.  Additional length and no wastage drastically improves the hand.  For instance, having \spades{KJT9xx} \hearts{AJT9xxx} \di{} \cl{x} after a \di1 opening has massive playing strength with only 5 losers.\n
+    
+    If at the 2-level, 2NT is a minor asking bid (typically weak).  Some example bidding sequences:
+
+    \ul {
+        \li (\cl1)
+        \ul {
+            \li \cl2 - (55)+ in \he{}/\sp{}
+            \li 2NT - 5\he{}, 5+\di{}s
+        }
+        \li (\di1)-p-(\di2) (strong)
+        \ul {
+            \li \di3 - (55)+ in \he{}/\sp{}
+            \li 2NT - 5\he{}, 5+\cl{}s
+        }
+        \li (\he1)
+        \ul {
+            \li \sp2 - exactly 5\sp{}s, 5+ unspecified minor.
+            \li 2NT - (55)+ in \cl{}/\di{}
+        }
+        \li (\sp1)-p-(\sp3) (weak)
+        \ul {
+            \li \sp2 - exactly 5\he{}s, 5+ unspecified minor.
+            \li 3NT - \textbf{natural, to play}
+            \li \sp4 - (55)+ in hearts and an unspecified minor.
+            \li 4NT - (55)+ in \cl{}/\di{}
+        }
+    }
+
+    Note that when showing one major and a minor (at a sufficiently low level) through 2NT or Michaels, one holds \textit{exactly} 5 cards in the major.  With a 6-card major and a 5-card minor, bid the major first.  When showing both majors, this restriction is unnecessary, as responder can choose either major game. \n
+
+    Unusual NT may occur at the 1 or 3-level by a passed hand.  At the 1-level (Sandwich NT), this only shows 5-4 shape, and fewer points (and defensive value) than X.  A sample auction: p-(\cl1)-p-(\sp1)-1NT.
+
+\section{Balancing} \label{4:7}
+
+    The balancing seat (and bid) is the bid that ends the auction with a pass (excluding 4 passes).  Since letting the opponents buy the contract at the 1-level is usually a poor choice, especially when ones partner has a stack of the opener's suit.  Thus, overcalling requirements are lower, including for 1NT (and 2NT over preempts). \n
+
+    As a general rule, add a (worthwhile) 3 HCP when balancing, and bid accordingly.  Thus, responding to a balanced overcall requires more strength or fit, but is identical to responding to a simple overcall.  Doubles are even more flexible. \n
+    
+    Since responder is passed, a jump overcall is not preemptive.  Thus, jumps show a good suit with 2-level overcall strength. \n
+
+    Balancing over a strong NT has already been discussed (Landy and X=\cl{}).  Excluding that auction:
+
+    \ul {
+        \li (\cl1)-p-(p)
+        \ul {
+            \li pass - some club length (opener may have [18-19] balanced with 3\cl{})
+            \li X - [8+] club shortness or [16+]
+            \li 1z - [7-15] 5+ suit (possibly an excellent 4)
+            \li 1NT - [11-15] balaced.  \textbf{System on}
+            \li \cl2 - Michaels.  Do \textbf{not} include the extra 3 HCP
+            \li 2z - [12-17] 6+ suit
+            \li 2NT - Unusual, 55 in \di{}/\he{}
+        }
+        \li (\he1)-p-(p)
+        \ul {
+            \li X - [7+] 2-\he{} (weaker since opener has a suit and escape in \sp1)
+        }
+    }
+
+    One can also balance over preempts, with the same 3-point differential. Thus, advancer must be careful to not overbid, as overcaller has `borrowed' a king. \n
+    
+    Doubles still serve as power doubles, showing [16+], Unfortunately, with a [15+] NT, one must make a balancing double and rebid NT.
+\newpage
+
+\bidsection{Unnatural \cl1 and \di1}{Unnatural 1♣ and 1♢}\label{4:8}
+
+    When our opponents play a non-2/1 or standard system, it typically revolves around a strong \cl1 or \di1 with a nebulous (quasi) \di1 or \cl1 respectively.  A nebulous minor is one that can be opened with 2 or less cards in the suit (excluding 4432 exactly).  For purpose of this section, we assume \cl1 is [16+] and \di1 is nebulous. \n
+
+    Against a strong [16+] 1m opening, the Mathe convention is used:
+
+    \ul {
+        \li X - both majors
+        \li 1NT - both minors
+    }
+
+    Additionally, most strong club and diamond players expect interference, thus 2-level suits or weak jump overcalls require some suit quality or a higher suit for escape if penalized.  Cuebids over strong, artificial bids are \textit{natural}, allowing for club hands to interfere.\n
+
+    Nebulous bids, however, are far more problematic.  Since either partner may have diamonds (especially opposite when opener promises as few as 0), bids must be repurposed.  With \he2 being the weakest jump preempt, it is repurposed as Michaels, and \di3 as a strong Michaels.  In lieu of (\di1)-\di2-(p)-\cl3 is a cue-raise (as opener likely will certainly have clubs).
+    
+    \ul {
+        \li (\di1)-short as (2-) or less
+        \ul {
+            \li \di2 - 5+ natural (further responses now function as if \cl1 was opened instead)
+            \ul {
+                \li \cl3 - cue raise
+            }
+            \li \he2 - [6-11] Michael's (non-vulnerable range used)
+            \li 2NT - Unusual, \textit{exactly} 5\he{}s and ambiguous 5-card minor
+            \ul {
+                \li \cl3 - pass-or-correct
+            }
+            \li \di3 - [16+] Michael's
+        }
+    }
+
+    Doubling a nebulous minor will promise the majors, and not the `unbid' minor.
 
 \chapter{Carding}
 
