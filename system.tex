@@ -826,7 +826,11 @@ Contents:
 \bidsection{2NT [20-21]}{2NT [20-21]} \label{2:9}
 
     2NT may be opened with shapes (4333), (4432), (5332), (5422), (6332), and (5431).  Singletons must be either A or K, opener must not have a 6-card major or 5-4 in the majors.\n
-    Puppet and transfers are used to investigate major fits, and \sp3 is used for hands with both minors.  Since opener has more points than responder, 4M is \textbf{not} to play, and instead shows a six card minor (two-below) with slam interest (inspired from Scanian methods). The full structure is as follows:
+
+    Puppet and transfers are used to investigate major fits, and \sp3 is used for hands with minors.  Single suited minors go through puppet ***; this leaks information but is easy on memory. The full structure is as follows:
+
+    %Since opener has more points than responder, 4M is \textbf{not} to play, and instead shows a six card minor (two-below) with slam interest (inspired from Scanian methods).
+
     \ul {
         \li \cl3 - puppet stayman; minors show a 5+ (usually 6) card suit
         \ul {
@@ -838,7 +842,7 @@ Contents:
 
             }
         }
-        \li \di3 - 5+\he{} transfer
+        \li \di3 - 5+\he{} transfer (with EKC jumps)
         \ul {
             \li \he3 - accept
             \ul {
@@ -860,13 +864,29 @@ Contents:
             \li \he4 - 4+\he{}s, superaccept (good outside tricks)
         }
         \li \he3 - 5+\sp{} transfer.  Use above continuation
-        \li \sp3 - (54)+ in minors
+        \li \sp3 - slammish with (54)+ in minors
+        \ul {
+            \li 3NT - bad slam hand
+            \ul {
+                \li \cl4 - 55 in minors
+                \ul {
+                    \li \di4 - Kickback for \cl{}
+                    \li \he4 - Kickback for \di{}
+                    \li \sp4 - cue (typically double fit)
+                    \li 4NT - double negative
+                    \li 5m - fit, 2 keycards
+                }
+                \li \di4 - Kickback for \cl{}
+                \li \he4 - Kickback for \di{}
+                \li \sp4 - ***
+            }
+            \li 4m - 4+ cards, flag suit
+            \li 4M - ***
+        }
         \li 3NT - to play
-        \li \cl4 - transfer to \he4, to play, cuebid, or 1430
-        \li \di4 - transfer to \sp4, to play, cuebid, or 1430
-        \li \he4 - 6+\cl{}s (usually 7), slammish.  Cuebids on
-        \li \sp4 - 6+\di{}s (usually 7), slammish. Cuebids on
-        \li 4NT - [12], quantative
+        \li 4m - transfer to \he4/\sp4, to play, cuebid, or 1430
+        \li 4M - ***
+        \li 4NT - [12], quantitative
         \li 5m - to play
     }
 \bidsection{3\cl{}/\di{}/\he{}/\sp{}}{3♣/♢/♡/♠} \label{2:10}
@@ -877,9 +897,7 @@ Contents:
 
 \bidsection{3NT - Gambling}{3NT - Gambling} \label{2:11}
 
-    3NT shows a 7-card (or better) minor headed by AKQ (or better).  In 1st/2nd seat, opener may have no more than an outside Q.  In 3rd/4th seat, opener promises \textit{exactly} one outside stopper.\n
-
-    Responder may correct to any level of minor (pass or correct) or cue a major.
+    3NT shows a 7-card (or better) minor headed by AKQ (or better).  In 1st/2nd seat, opener may have no more than an outside Q.  In 3rd/4th seat, opener promises \textit{exactly} one outside stopper. Responder may correct to any level of minor (pass or correct) or cue a major.
 
 \bidsection{4\cl{}/\di{}/\he{}/\sp{} - NAMYATS}{4♣/♢/♡/♠ - NAMYATS} \label{2:12}
 
@@ -928,6 +946,7 @@ Contents:
     \li \ref{3:4} - NT Interference
     \li \ref{3:5} - Preempts
     \li \ref{3:6} - Two-Suited Overcalls
+    \li \ref{3:7} - Slam Interference
 }
 
 \newpage
@@ -1296,6 +1315,38 @@ Contents:
             \li \he3 - [15-17] 6+\he{}s
         }
     }
+\newpage
+\section{Slam Interference} \label{3:7}
+
+    In slam auctions, the partnership cues first and second round controls (A, K, singleton, void).  Thus, opponents may make lead-directing doubles on this cue.  To show control type, redouble/pass is used:
+
+    \ul {
+        \li-\sp1-2NT-\sp3-\cl4-(X)
+        \ul {
+            \li pass - denies A/void
+            \ul {
+                \li XX - 1st round
+                \li 4z - cue with 2nd round
+            }
+            \li XX - first round control
+            \li 3NT - non-serious, first round control
+            \li 4z - serious, first round control
+        }
+    }
+
+    If opponents interfere with a keycard auction, 1430 step responses are used DIPO/RIPO style:
+
+    \ul{
+        \li \sp1-2NT-\sp3-4NT-\he5-
+        \ul {
+            \li X - 0/3 keycards
+            \li pass - 1/4 keycards
+            \li Step 1 - 2/5 without Q
+            \li Step 2 - 2/5 with Q
+        }
+    }
+
+    If X/XX or pass, the next step is queen ask.  If showing the queen, further bids are cues for grand.  If the kickback ask is available (usually after an X of kickback suit or with an X/pass response), it becomes the grand-slam invite/king-ask.
 \chapter{Overcalling and Advancing}
 \section{Overview} \label{4:1}
     
@@ -1741,5 +1792,40 @@ Contents:
     Doubling a nebulous minor will promise the majors, and not the `unbid' minor.
 
 \chapter{Carding}
+
+    Against NT contracts, leads are typically fourth-best from the longest suit.  Suit contracts instead use 3rd/5th leads. \n
+
+    If partner leads a suit, one shows upside-down attitude (2=strong, 10=weak).  If declarer leads a suit, show upside-down count (2=even, 10=odd).  If declarer leads a trump, show suit preference (if useful). \n
+
+    For the first discard, odd-even discards are used.  An odd numbered discard shows strength in the suit, while an even discard discourages and shows suit preference, a low even shows preference for the lower-ranking non-trump suit, a higher discard shows preference for a higher-ranking non-trump discard.  In case of NT, show high/low relative to suit played.\n
+
+    Honor discards show complete control of a suit, but when a suit control is on the board (singleton, Kx, Qxx after AK, etc.), show suit preference.\n
+
+    \newcommand{\uu}[1]{\underline{#1}}
+    Leads are as follows:
+    \begin{center}
+        \begin{tabular}{ |c|c| } 
+            \hline
+            Suit & NT \n
+            \hline
+            \uu{x}x & \uu{x}x\n
+            xx\uu{x} & \uu{x}xx ***\n
+            xx\uu{x}x & xxx\uu{x}\n
+            xxxx\uu{x} & xxx\uu{x}x\n
+            Hx\uu{x} & Hx\uu{x}\n
+            Hx\uu{x}x & Hxx\uu{x}\n
+            Hxxx\uu{x} & Hxx\uu{x}x\n
+            \uu{A}Kx & \uu{A}Kx\uu{x}\n
+            \uu{K}Qx & \uu{K}QJx\n
+            \uu{Q}Jx & K\uu{Q}T9\n
+            \uu{J}Tx & \uu{Q}JTx\n
+            \uu{T}9x & \uu{J}T9x\n
+            K\uu{J}Tx & A\uu{Q}Jx\n
+            K\uu{T}9x & A\uu{J}Tx\n
+            Q\uu{T}9x & K\uu{T}9x\n
+            A\uu{K} & Q\uu{T}9x\n
+            \hline
+        \end{tabular}
+    \end{center}
 
 \end{document}
