@@ -5,6 +5,8 @@
 \hbadness=99999
 
 \usepackage{extsizes}
+\usepackage{blindtext}
+\usepackage{titlesec}
 \usepackage{amssymb,amsfonts,amsmath}
 \usepackage{mathrsfs}
 \usepackage[unicode=true]{hyperref}
@@ -33,22 +35,19 @@
 \maketitle
 \newpage
 
-\chapter{Introduction}
+\tableofcontents
+
+\chapter{Introduction} \label{1}
 \section{Biography}
 
     Daniel Schuck, a current junior at University of Illinois Urbana-Champaign.  An avid overbidder and the primary author of this book.  System and convention design is fascinating to me, despite cardplay being far more important.
-\n\n
-
-\section{Motivation}
-
-    This book exists to formalize our 2/1 bidding system to both avoid misunderstanding and optimize game and slam searching. ***
-\n\n
+\n
 
 \section{Structure}
 
-    This system is built off a fairly standard 2/1 game-forcing system.  It features artificial fit-showing responses after opener (or responder) show a 4-card minor after transfers, Gazzilli, etc.\n
-
-    Two common motifs are used for artificial raises:
+    This system is built off a fairly standard 2/1 game-forcing system.  Major modifications include Gazzilli over 1M, shape-showing responses when seeking 6m after 1N opening. \n
+    
+    Two common motifs are used for artificial raises: \n
     
     The first motif: if one must decide between showing a (potential) major fit and a minor fit, show the major first. For instance, after 1NT-\di2-\he2-\cl3, a club fit is confirmed via \di3, which necessarily \textit{denies} a heart fit, as opener must show the major fit first.\n
 
@@ -56,7 +55,7 @@
 
 \newpage
 
-\chapter{Openings and Continuations}
+\chapter{Openings and Continuations}  \label{2}
 \section{Overview} \label{2:1}
     HCP notation: [$x$-$y$] indicates HCP range from `$x$' to `$y$' inclusive, with ($x$+) and ($y$-) indicating an upgraded or downgraded hand respectively.  [(14+)-17] is a good 14 to any 17 count. Table of openings is as follows:
     
@@ -780,7 +779,9 @@ Contents:
 
 \bidsection{2\di{}/\he{}/\sp{}}{2♢/♡/♠} \label{2:8}
 
-    The first of the weak-2 opening bids, \di2 is perhaps the most interesting.  It eats up bidding space without giving the opposition a major to look for.  \he2/\sp2 have the benefit of more often reaching \he4/\sp4, which makes it easier to reach game for the partnership.  Regardless of suit, it is important for the opener to have a well-defined hand for when their partner is preempted.  Since preempts depending on both vulnerability and seat, the definitions are as follows:
+    Preemptive 2-level openings jam the auction for the opponents, while also giving a vivid description of opener's hand.  With \cl2 able to absorb all strong hands, the other 2-level suit bids are freed up to show weak hands with a long suit. \n
+
+    The first of the weak-2 opening bids, \di2 is perhaps the most interesting.  It eats up bidding space while forcing the opponents to consider both majors.  \he2/\sp2 have the benefit of more often reaching \he4/\sp4, which makes it easier to reach a safe game for the partnership.  Regardless of suit, it is important for the opener to have a well-defined hand for when their partner is preempted.  Since preempts depend on both vulnerability and seat, the strength and quality definitions are as follows:
 
     \ul {
         \li non-vulnerable
@@ -936,7 +937,7 @@ Contents:
         \li \he4 - Weak preempt, 8-card broken heart suit or less than 8 tricks.  Use above continuation
     }
 
-\chapter{Interference}
+\chapter{Interference}  \label{3}
 \section{Overview} \label{3:1}
 
 Unfortunately, bridge is not a simple as a back-and-forth conversation with our partner.  Thus, we must have methods for competitive auctions, both when our opponents preempt and overcall.  Since both opener's and overcaller's hands have a suit, our methods show the probable and important hands of responder.  Bids in parenthesis are interference: \cl1-(\he1)-X-(XX). \n
@@ -1347,7 +1348,7 @@ Contents:
     }
 
     If X/XX or pass, the next step is queen ask.  If showing the queen, further bids are cues for grand.  If the kickback ask is available (usually after an X of kickback suit or with an X/pass response), it becomes the grand-slam invite/king-ask.
-\chapter{Overcalling and Advancing}
+\chapter{Overcalling and Advancing} \label{4}
 \section{Overview} \label{4:1}
     
     When the opponents open the bidding, it is important to both interfere with their strong auctions, as well as reach games (and rarely, slams) when we have the points or shape.\n
@@ -1803,18 +1804,13 @@ Contents:
 
     Doubling a nebulous minor will promise the majors, and not the `unbid' minor.
 
-\chapter{Carding}
+\chapter{Carding} \label{5}
 
-    Against NT contracts, leads are typically fourth-best from the longest suit.  Suit contracts instead use 3rd/5th leads. \n
+\section{Leads}
 
-    If partner leads a suit, one shows upside-down attitude (2=strong, 10=weak).  If declarer leads a suit, show upside-down count (2=even, 10=odd).  If declarer leads a trump, show suit preference (if useful). \n
-
-    For the first discard, odd-even discards are used.  An odd numbered discard shows strength in the suit, while an even discard discourages and shows suit preference, a low even shows preference for the lower-ranking non-trump suit, a higher discard shows preference for a higher-ranking non-trump discard.  In case of NT, show high/low relative to suit played.\n
-
-    Honor discards show complete control of a suit, but when a suit control is on the board (singleton, Kx, Qxx after AK, etc.), show suit preference.\n
+    Against NT contracts, leads are typically fourth-best from the longest suit.  Suit contracts instead use 3rd/5th leads. The common honor leads are as follows:
 
     \newcommand{\uu}[1]{\underline{#1}}
-    Leads are as follows:
     \begin{center}
         \begin{tabular}{ |c|c| } 
             \hline
@@ -1839,5 +1835,13 @@ Contents:
             \hline
         \end{tabular}
     \end{center}
+
+\section{Signals}
+
+    If partner leads a suit, one shows upside-down attitude (2=strong, 10=weak).  If declarer leads a suit, show upside-down count (2=even, 10=odd).  If declarer leads a trump, show suit preference (if useful). \n
+
+    For the first discard, odd-even discards are used.  An odd numbered discard shows strength in the suit, while an even discard discourages and shows suit preference, a low even shows preference for the lower-ranking non-trump suit, a higher discard shows preference for a higher-ranking non-trump discard.  In case of NT, show high/low relative to suit played.\n
+
+    Honor discards show complete control of a suit, but when a suit control is on the board (singleton, Kx, Qxx after AK, etc.), show suit preference.\n
 
 \end{document}
